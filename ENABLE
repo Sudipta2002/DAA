@@ -1,0 +1,46 @@
+1-Configure the hostname of thr switch as SW1
+ans-    
+Switch>enable
+Switch#config t
+Enter configuration commands,one per line.
+End with CNTL/Z
+Switch(config)#hostname SW1
+SW1(config)#
+
+2-Set a message of the day (MOTD) banner for the switch-
+  ***********
+  Only Authorized Users Allowed
+  ***********
+ans-
+SW1(config)#banner motd#
+Enter TEXT message. End with the character'#'
+  ***********
+  Only Authorized Users Allowed
+  ***********
+#
+
+3-Configure a
+ line console password- India@123
+ enable secret paswword- uem@123
+ans-
+SW1(config)# line con 0
+SW1(config-line)#password India@123
+SW1(config-line)#login
+SW1(config-line)#exit
+SW1(config)#exit
+SW1#
+%SYS-5-CONFIG_I: Configured from console by console
+exit
+SW1 con0 is now available
+Press RETURN to get started
+***********
+Only Authorized Users Allowed
+***********
+User Access Verification
+Password:India@123
+SW1>enable
+SW1#config t
+Enter configuration commands one per line.
+ End with CNTL/2
+SW1(config)#enable secret password Uem@123
+SW1(Config)#exit
